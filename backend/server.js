@@ -9,8 +9,7 @@ const complaintRoutes = require("./routes/complaints");
 const app = express();
 const PORT = process.env.PORT || 5000;
 const MONGODB_URI =
-  process.env.MONGODB_URI ||
-  "mongodb+srv://admin:admin1234@cluster0.eyeihs3.mongodb.net/complaintDB";
+  process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/student_complaint_system";
 
 app.use(cors());
 app.use(express.json());
