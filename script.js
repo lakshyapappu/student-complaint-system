@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:5000/api";
+const API_BASE = "https://student-complaint-system-49er.onrender.com/api";
 const page = document.body.dataset.page;
 
 document.addEventListener("DOMContentLoaded", () => {
