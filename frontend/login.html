@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Student Complaint Management System</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-page="login">
+    <main class="auth-shell">
+      <section class="auth-panel brand-panel">
+        <p class="eyebrow">Campus Support Portal</p>
+        <h1>VFSTR Complaint Management System</h1>
+      </section>
+
+      <section class="auth-panel form-panel">
+        <form id="loginForm" class="card auth-card">
+          <h2>Login</h2>
+          <label>
+            Username
+            <input type="text" id="loginUsername" placeholder="Enter username" required />
+          </label>
+          <label>
+            Password
+            <input type="password" id="loginPassword" placeholder="Enter password" required />
+          </label>
+          <button type="submit" class="btn btn-primary">Login</button>
+          <p class="switch-link">
+            New here? <a href="./signup.html">Create an account</a>
+          </p>
+          <p id="loginMessage" class="message"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

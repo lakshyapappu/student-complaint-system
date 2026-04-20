@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup | Student Complaint Management System</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body data-page="signup">
+    <main class="auth-shell">
+      <section class="auth-panel brand-panel">
+        <p class="eyebrow">Join The Portal</p>
+        <h1>Create your account</h1>
+        <p>
+          Students can register complaints and track their progress. Admins can review,
+          update statuses, and add remarks.
+        </p>
+      </section>
+
+      <section class="auth-panel form-panel">
+        <form id="signupForm" class="card auth-card">
+          <h2>Signup</h2>
+          <label>
+            Username
+            <input type="text" id="signupUsername" placeholder="Choose username" required />
+          </label>
+          <label>
+            Password
+            <input type="password" id="signupPassword" placeholder="Create password" required />
+          </label>
+          <label>
+            Role
+            <select id="signupRole">
+              <option value="student">Student</option>
+              <option value="admin">Admin</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn-primary">Create Account</button>
+          <p class="switch-link">
+            Already have an account? <a href="./login.html">Login</a>
+          </p>
+          <p id="signupMessage" class="message"></p>
+        </form>
+      </section>
+    </main>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
