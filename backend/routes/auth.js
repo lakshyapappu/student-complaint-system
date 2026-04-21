@@ -3,6 +3,15 @@ const User = require("../models/User");
 
 const router = express.Router();
 
+router.get("/all-users", async (req, res) => {
+  try {
+    const users = await User.find();
+    res.json(users);
+  } catch (error) {
+    res.status(500).json({ message: "Error fetching users" });
+  }
+});
+
 router.post("/signup", async (req, res) => {
   try {
     const { username, password, role } = req.body;
