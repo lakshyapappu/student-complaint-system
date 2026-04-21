@@ -380,13 +380,19 @@ async function withdrawComplaint(complaintId) {
 
 async function fetchUserComplaints(userId) {
   const response = await fetch(`${API_BASE}/complaints/user/${userId}`);
-  const complaints = await response.json();
 
-  if (!response.ok) {
-    throw new Error(complaints.message || "Could not fetch user complaints.");
+  let data;
+  try {
+    data = await response.json();
+  } catch {
+    throw new Error("Server returned invalid response.");
   }
 
-  return complaints;
+  if (!response.ok) {
+    throw new Error(data.message || "Could not fetch user complaints.");
+  }
+
+  return data;
 }
 
 function createComplaintCard(complaint) {
