@@ -156,7 +156,7 @@
         }
     </style>
 </head>
-<body>
+<body data-page="login">
 
     <main class="auth-shell" id="mainShell">
         
@@ -174,18 +174,18 @@
         </section>
 
         <section class="form-panel">
-            <form class="auth-card" onsubmit="event.preventDefault();">
+            <form class="auth-card" id="loginForm"></form>
                 <h2>Login</h2>
                 <label>Username</label>
-                <input type="text" placeholder="Enter username">
-                
+                <input type="text" id="loginUsername" placeholder="Enter username">
                 <label>Password</label>
-                <input type="password" placeholder="Enter password">
+                <input type="password" id="loginPassword" placeholder="Enter password">
                 
                 <button type="submit" class="btn-login">Login</button>
+                <p id="loginMessage" style="text-align:center; margin-top:10px;"></p>
                 
                 <p style="font-size: 0.85rem; color: #888; text-align: center; margin-top: 20px;">
-                    New here? <a href="#" style="color: #5a7a2a; font-weight: bold; text-decoration: none;">Create an account</a>
+                    New here? <a href="register.html" style="color: #5a7a2a; font-weight: bold; text-decoration: none;">Create an account</a>
                 </p>
             </form>
         </section>
@@ -198,5 +198,6 @@
             document.getElementById('mainShell').classList.add('is-split');
         }
     </script>
+    <script src="../script.js"></script>
 </body>
 </html>
