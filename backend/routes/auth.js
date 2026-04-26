@@ -11,7 +11,6 @@ router.get("/all-users", async (req, res) => {
     res.status(500).json({ message: "Error fetching users" });
   }
 });
-
 router.post("/signup", async (req, res) => {
   try {
     const { username, password, role } = req.body;
